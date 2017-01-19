@@ -1,0 +1,16 @@
+{
+  "name": "flyswatter",
+  "version": "1.0.0",
+  "description": "static file server to run from the terminal",
+  "main": "index.js",
+  "repository": {},
+  "author": "@bcruddy",
+  "license": "MIT",
+  "bin": {
+      "flyswatter": "./index.js"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "yargs": "^6.6.0"
+  }
+}
