@@ -14,9 +14,13 @@ try {
     config.https = JSON.parse(config.https);
     config.port = JSON.parse(config.port);
 } catch (ex) {
-    console.error('Encountered an issue parsing arguments');
+    console.error('[flyswatter] encountered an issue parsing arguments\n');
     throw ex;
 }
 
 server(config)
-    .then(server => listen(server, config));
+    .then(server => listen(server, config))
+    .catch(err => {
+        console.log('[flyswatter] unknown error\n');
+        throw err;
+    });
