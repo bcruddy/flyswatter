@@ -15,7 +15,7 @@ Install globally to run `flyswatter` and serve static files from anywhere.
         server.listen(9300, callback);
     });
 
-_note the `port` config option must be provided explicitly to `server`_
+_*note the `port` config option must be provided explicitly to `server.listen`_
 
 ## config
 | parameter   | default     |
