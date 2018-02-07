@@ -1,9 +1,15 @@
-# flyswatter
+# flyswatter [![npm version](https://badge.fury.io/js/flyswatter.svg)](https://badge.fury.io/js/flyswatter)
 
 Simple static file server built on express.
 
-Install globally to expose `flyswatter` command in the terminal.
+Install globally to run `flyswatter` and serve static files from anywhere.
 
-Accepts arguments for `https`, `port` and `path`, defaults to `--https=true`, `--port=3000` and `--path=./`
+## options
+| parameter   | default     |
+| ----------- | ----------- |
+| `https`     | `true`      |
+| `port`      | `3000`      |
+| `path`      | `./`        |
 
-    flyswatter --https=false --port=9300 --path=./docs
+## usage
+    $ flyswatter --https=false --port=9300 --path=./docs
