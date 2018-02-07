@@ -1,6 +1,6 @@
-module.exports = (server, {path, port, https: isHttps}) => {
+module.exports = (server, {port, https: isHttps}) => {
     server.listen(port, () => {
-        console.log(`\n\tflyswatter listening on port ${port}
-            \n\tcwd: ${process.cwd()}\n\tpath: ${path}\n\thttps: ${isHttps}\n`);
+        const protocol = isHttps ? 'https' : 'http';
+        console.log(`[flyswatter] listening on ${protocol}://localhost:${port}`);
     });
 };

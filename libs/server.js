@@ -5,13 +5,12 @@ const http = require('http'),
 
 module.exports = function server (config) {
     return new Promise((resolve, reject) => {
-        const app = express(),
-            {path, https: isHttps} = config;
+        const app = express();
 
-        app.use(express.static(path));
+        app.use(express.static(config.path));
 
         let server;
-        if (isHttps) {
+        if (config.https) {
             keygen()
                 .then(credentials => {
                     server = https.createServer(credentials, app);
