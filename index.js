@@ -1,11 +1,22 @@
 #!/usr/bin/env node
 
 const argv = require('yargs').argv,
-    server = require('./libs/server');
+    server = require('./libs/server'),
+    listen = require('./libs/listen');
 const config = Object.assign({}, {
     path: './',
     port: 3000,
     https: true
 }, argv);
 
-server(config);
+try {
+    // cli args all come in as strings, we need these types to be correct
+    config.https = JSON.parse(config.https);
+    config.port = JSON.parse(config.port);
+} catch (ex) {
+    console.error('Encountered an issue parsing arguments');
+    throw ex;
+}
+
+server(config)
+    .then(server => listen(server, config));

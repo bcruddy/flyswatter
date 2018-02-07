@@ -2,14 +2,24 @@
 
 Simple static file server built on express.
 
+## cli usage
+
 Install globally to run `flyswatter` and serve static files from anywhere.
 
-## options
+    $ flyswatter --https=false --port=9300 --path=./docs
+
+## programatic usage
+
+    const flyswatter = require('flyswatter');
+    flyswatter({https: false, path: './docs'}).then(server => {
+        server.listen(9300, callback);
+    });
+
+_note the `port` config option must be provided explicitly to `server`_
+
+## config
 | parameter   | default     |
 | ----------- | ----------- |
 | `https`     | `true`      |
 | `port`      | `3000`      |
 | `path`      | `./`        |
-
-## usage
-    $ flyswatter --https=false --port=9300 --path=./docs
