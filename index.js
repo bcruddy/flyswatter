@@ -2,5 +2,10 @@
 
 const argv = require('yargs').argv,
     server = require('./server');
+const config = Object.assign({}, {
+    path: './',
+    port: 3000,
+    https: true
+}, {...argv});
 
-server(argv.path, argv.port);
+server(config);
