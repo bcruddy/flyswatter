@@ -1,6 +1,7 @@
 const pem = require('pem');
 
 module.exports = () => new Promise((resolve, reject) => {
+    console.log('[flyswatter] generating self signed certificate...');
     pem.createCertificate({days: 1, selfSigned: true}, function (err, keys) {
         if (err) {
             reject(err);
