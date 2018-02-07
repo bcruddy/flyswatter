@@ -2,6 +2,7 @@
 
 const argv = require('yargs').argv,
     server = require('./lib/server'),
+    logger = require('./lib/logger'),
     listen = require('./lib/listen');
 const config = Object.assign({}, {
     path: './',
@@ -14,13 +15,13 @@ try {
     config.https = JSON.parse(config.https);
     config.port = JSON.parse(config.port);
 } catch (ex) {
-    console.error('[flyswatter] encountered an issue parsing arguments\n');
+    logger.error('encountered an issue parsing arguments\n');
     throw ex;
 }
 
 server(config)
     .then(server => listen(server, config))
     .catch(err => {
-        console.log('[flyswatter] unknown error\n');
+        !err.known && logger.error('unknown error\n');
         throw err;
     });
