@@ -7,10 +7,11 @@
   "license": "MIT",
   "repository": "https://github.com/bcruddy/flyswatter",
   "bin": {
-      "flyswatter": "./index.js"
+    "flyswatter": "./index.js"
   },
   "dependencies": {
     "express": "^4.14.0",
+    "pem": "^1.12.3",
     "yargs": "^6.6.0"
   }
 }
