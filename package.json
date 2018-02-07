@@ -1,6 +1,6 @@
 {
   "name": "flyswatter",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "static file server to run from the terminal",
   "main": "index.js",
   "author": "@bcruddy",
