@@ -10,7 +10,8 @@
         "flyswatter": "./index.js"
     },
     "scripts": {
-        "lint": "eslint index.js lib/*.js"
+        "lint": "eslint index.js lib/*.js",
+        "test": "npm run lint && jest --no-cache --coverage"
     },
     "dependencies": {
         "body-parser": "^1.18.2",
@@ -21,6 +22,8 @@
         "yargs": "^6.6.0"
     },
     "devDependencies": {
-        "eslint": "^4.17.0"
+        "eslint": "^4.17.0",
+        "jest": "^22.2.1",
+        "supertest": "^3.0.0"
     }
 }

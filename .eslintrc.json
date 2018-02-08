@@ -18,6 +18,9 @@
         "computed-property-spacing": ["error", "never"],
         "comma-dangle": ["error", "never"],
         "eol-last": "error",
-        "no-trailing-spaces": "error"
+        "no-trailing-spaces": "error",
+        "no-unused-vars": "error",
+        "padded-blocks": ["error", "never"],
+        "no-console": "error"
     }
 }
