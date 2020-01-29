@@ -1,8 +1,8 @@
 module.exports = {
     https: true,
-    port: 5050,
+    port: 3000,
     path: './',
     proxy: {
-        '/api': 'http://localhost:5050/api'
+        '/api': 'http://localhost:3030/api'
     }
 };
