@@ -12,21 +12,21 @@
     "scripts": {
         "start": "nodemon ./index.js",
         "lint": "eslint index.js lib/*.js",
-        "test": "npm run lint && jest --no-cache --coverage"
+        "test": "npm run lint && jest --no-cache --coverage --testURL=http://localhost"
     },
     "dependencies": {
         "axios": "^0.19.2",
-        "body-parser": "^1.18.2",
-        "chalk": "^2.3.0",
+        "body-parser": "^1.19.0",
+        "chalk": "^2.4.2",
         "express": "^4.17.1",
         "lodash": "^4.17.15",
-        "pem": "^1.12.3",
+        "pem": "^1.14.4",
         "yargs": "^6.6.0"
     },
     "devDependencies": {
-        "eslint": "^4.17.0",
-        "jest": "^22.2.1",
+        "eslint": "^4.19.1",
+        "jest": "^22.4.4",
         "nodemon": "^2.0.2",
-        "supertest": "^3.0.0"
+        "supertest": "^3.4.2"
     }
 }
